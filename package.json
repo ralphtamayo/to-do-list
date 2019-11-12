@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/ralphtamayo/to-do-list/issues"
   },
-  "homepage": "https://github.com/ralphtamayo/to-do-list#readme"
+  "homepage": "https://github.com/ralphtamayo/to-do-list#readme",
+  "dependencies": {
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
 }
