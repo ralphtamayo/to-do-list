@@ -1,7 +1,7 @@
 {
   "name": "to-do-list",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Simple To-do List app",
   "main": "index.js",
   "scripts": {
     "start": "nodemon app.js"
@@ -10,15 +10,20 @@
     "type": "git",
     "url": "git+https://github.com/ralphtamayo/to-do-list.git"
   },
-  "author": "",
+  "author": "Ralph Tamayo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ralphtamayo/to-do-list/issues"
   },
   "homepage": "https://github.com/ralphtamayo/to-do-list#readme",
   "dependencies": {
+    "@koa/router": "^8.0.2",
+    "graphql": "^14.5.8",
     "koa": "^2.11.0",
-    "koa-bodyparser": "^4.2.1"
+    "koa-bodyparser": "^4.2.1",
+    "koa-graphiql": "^1.1.0",
+    "koa-graphql": "^0.8.0",
+    "koa-mount": "^4.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
