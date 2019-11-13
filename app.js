@@ -9,6 +9,8 @@ const bodyParser = require('koa-bodyparser');
 const app = new Koa();
 const router = new Router();
 
+const tasks = [];
+
 app.use(bodyParser())
 	.use(router.routes())
 	.use(router.allowedMethods())
@@ -17,12 +19,25 @@ app.use(bodyParser())
 app.use(mount('/api', graphqlHTTP({
 	graphiql: true,
 	schema: buildSchema(`
+		type Task {
+			_id: ID!
+			title: String!
+			description: String!
+			createdAt: String!
+		}
+
+		input TaskCreateInput {
+			title: String!
+			description: String!
+			createdAt: String!
+		}
+
 		type RootQuery {
-			tasks: [String!]!
+			tasks: [Task!]!
 		}
 
 		type RootMutation {
-			createTask(name: String): String
+			createTask(taskCreateInput: TaskCreateInput): Task
 		}
 
 		schema {
@@ -32,10 +47,18 @@ app.use(mount('/api', graphqlHTTP({
 	`),
 	rootValue: {
 		tasks: () => {
-			return ['Prepare ingredients', 'Cook meal'];
+			return tasks;
 		},
-		createTask: (task) => {
-			return task.name;
+		createTask: (args) => {
+			const task = {
+				_id: Math.random().toString(),
+				title: args.taskCreateInput.title,
+				description: args.taskCreateInput.description,
+				createdAt: args.taskCreateInput.date
+			};
+
+			tasks.push(task);
+			return task;
 		}
 	}
 })));
