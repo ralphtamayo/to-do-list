@@ -1,0 +1,25 @@
+{
+  "name": "to-do-list-api",
+  "version": "1.0.0",
+  "description": "A Simple To-do List app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Ralph Tamayo",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/router": "^8.0.2",
+    "bcryptjs": "^2.4.3",
+    "graphql": "^14.5.8",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-graphiql": "^1.1.0",
+    "koa-graphql": "^0.8.0",
+    "koa-mount": "^4.0.0",
+    "mongoose": "^5.7.10"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}

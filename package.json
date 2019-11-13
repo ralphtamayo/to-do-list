@@ -1,33 +1,31 @@
 {
   "name": "to-do-list",
-  "version": "1.0.0",
-  "description": "A Simple To-do List app",
-  "main": "index.js",
-  "scripts": {
-    "start": "nodemon app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ralphtamayo/to-do-list.git"
-  },
-  "author": "Ralph Tamayo",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ralphtamayo/to-do-list/issues"
-  },
-  "homepage": "https://github.com/ralphtamayo/to-do-list#readme",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "@koa/router": "^8.0.2",
-    "bcryptjs": "^2.4.3",
-    "graphql": "^14.5.8",
-    "koa": "^2.11.0",
-    "koa-bodyparser": "^4.2.1",
-    "koa-graphiql": "^1.1.0",
-    "koa-graphql": "^0.8.0",
-    "koa-mount": "^4.0.0",
-    "mongoose": "^5.7.10"
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-scripts": "3.2.0"
   },
-  "devDependencies": {
-    "nodemon": "^1.19.4"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
