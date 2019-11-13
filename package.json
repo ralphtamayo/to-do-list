@@ -23,7 +23,8 @@
     "koa-bodyparser": "^4.2.1",
     "koa-graphiql": "^1.1.0",
     "koa-graphql": "^0.8.0",
-    "koa-mount": "^4.0.0"
+    "koa-mount": "^4.0.0",
+    "mongoose": "^5.7.10"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"

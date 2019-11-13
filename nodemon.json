@@ -1,0 +1,7 @@
+{
+    "env": {
+        "db_user": "ralphtamayo",
+        "db_password": "7OCTtNT3l8gre9vD",
+        "db_name": "to-do-list"
+    }
+}
